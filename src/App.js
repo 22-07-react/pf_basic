@@ -11,6 +11,7 @@ import Visual from './components/main/Visual';
 import Department from './components/sub/Department';
 import Youtube from './components/sub/Youtube';
 import Location from './components/sub/Location';
+import Members from './components/sub/Members';
 
 import './scss/style.scss';
 
@@ -31,6 +32,7 @@ function App() {
 			<Route path='/department' component={Department} />
 			<Route path='/youtube' component={Youtube} />
 			<Route path='/location' component={Location} />
+			<Route path='/members' component={Members} />
 
 			<Footer />
 		</>
