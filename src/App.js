@@ -9,6 +9,7 @@ import Visual from './components/main/Visual';
 
 //sub
 import Department from './components/sub/Department';
+import Community from './components/sub/Community';
 import Youtube from './components/sub/Youtube';
 import Location from './components/sub/Location';
 import Members from './components/sub/Members';
@@ -30,6 +31,7 @@ function App() {
 			</Switch>
 
 			<Route path='/department' component={Department} />
+			<Route path='/community' component={Community} />
 			<Route path='/youtube' component={Youtube} />
 			<Route path='/location' component={Location} />
 			<Route path='/members' component={Members} />
