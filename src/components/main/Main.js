@@ -12,6 +12,7 @@ function Main() {
 	const main = useRef(null);
 	const pos = useRef([]);
 	const [Index, setIndex] = useState(0);
+	const [Scrolled, setScrolled] = useState(0);
 
 	//섹션의 세로 위치값을 구하는 함수
 	const getPos = () => {
@@ -24,11 +25,9 @@ function Main() {
 	const activation = () => {
 		const scroll = window.scrollY;
 		const btns = main.current.querySelectorAll('.scroll_navi li');
+		setScrolled(scroll);
 
-		//pos.current에 등록된 각 섹션의 세로 위치값을 반복
 		pos.current.map((pos, idx) => {
-			//현재 스크롤된 거리값이 각 섹션의 위치값보다 같거나 크면
-			//기존 버튼 모두 비활성화 시키고 해당 순번의 버튼만 활성화
 			if (scroll >= pos) {
 				for (const btn of btns) btn.classList.remove('on');
 				btns[idx].classList.add('on');
@@ -48,6 +47,7 @@ function Main() {
 	}, []);
 
 	useEffect(() => {
+		console.log(Index);
 		new Anime(window, {
 			prop: 'scroll',
 			value: pos.current[Index],
@@ -62,7 +62,7 @@ function Main() {
 			<News />
 			<Pics />
 			<Vids />
-			<Btns setIndex={setIndex} />
+			<Btns setIndex={setIndex} Scrolled={Scrolled} pos={pos.current} Index={Index} />
 		</main>
 	);
 }
