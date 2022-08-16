@@ -8,8 +8,6 @@ const btnStyle = {
 };
 
 function Visual() {
-	const box = useRef(null);
-
 	return (
 		<figure id='visual'>
 			<button
