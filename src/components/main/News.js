@@ -11,12 +11,10 @@ function News() {
 			{ title: 'Hello1', content: 'Here comes description in detail.' },
 		];
 		const data = localStorage.getItem('post');
-		console.log(data);
 
 		if (data) {
 			return JSON.parse(data);
 		} else {
-			console.log('더미 데이터 담기');
 			return dummyPosts;
 		}
 	};

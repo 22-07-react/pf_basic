@@ -12,7 +12,7 @@ function Youtube() {
 	const [Index, setIndex] = useState(0);
 
 	useEffect(() => {
-		const key = 'AIzaSyCjKYbUcNseIkTsTgciA-Pkjzcm-_IjYdM';
+		const key = 'AIzaSyCMfwz2923Ts1sPkx0J7I0mnMHPmYKw4vo';
 		const playlist = 'PLHtvRFLN5v-VD95TBpr5Dh2zguWCjjmMG';
 
 		const num = 4;
