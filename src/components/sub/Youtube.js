@@ -12,10 +12,9 @@ function Youtube() {
 	const [Index, setIndex] = useState(0);
 
 	useEffect(() => {
-		const key = 'AIzaSyCCiJkX1nNqYL222H5m-0fCS65LfzyExlQ';
-		//const playlist = 'PLHtvRFLN5v-VD95TBpr5Dh2zguWCjjmMG';
-		//const playlist = 'PLGOVj4gmzJyBMQSKPpBoycEvgXVFPMRZV';
-		const playlist = 'PLGOVj4gmzJyDs7u5aTiRjp1OpvOsnxPLT';
+		const key = 'AIzaSyCjKYbUcNseIkTsTgciA-Pkjzcm-_IjYdM';
+		const playlist = 'PLHtvRFLN5v-VD95TBpr5Dh2zguWCjjmMG';
+
 		const num = 4;
 		const url = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&key=${key}&playlistId=${playlist}&maxResults=${num}`;
 		axios
