@@ -5,7 +5,7 @@ import Header from './components/common/Header';
 import Footer from './components/common/Footer';
 
 //main
-import Visual from './components/main/Visual';
+import Main from './components/main/Main';
 
 //sub
 import Department from './components/sub/Department';
@@ -20,14 +20,8 @@ function App() {
 	return (
 		<>
 			<Switch>
-				<Route exact path='/'>
-					<Header type={'main'} />
-					<Visual />
-				</Route>
-
-				<Route path='/'>
-					<Header type={'sub'} />
-				</Route>
+				<Route exact path='/' component={Main} />
+				<Route path='/' render={() => <Header type={'sub'} />} />
 			</Switch>
 
 			<Route path='/department' component={Department} />
