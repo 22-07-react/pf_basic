@@ -6,7 +6,15 @@ function Community() {
 	const textarea = useRef(null);
 	const inputEdit = useRef(null);
 	const textareaEdit = useRef(null);
-	const [Posts, setPosts] = useState([]);
+
+	//로컬스토리지에 있는 데이터를 가져와서 다시 JSON객체로 parsing해서 리턴하는 함수
+	const getLocalData = () => {
+		const data = localStorage.getItem('post');
+		return JSON.parse(data);
+	};
+
+	//초기 Posts스테이트에 로컬스토리지의 데이터를 가져와서 저장
+	const [Posts, setPosts] = useState(getLocalData());
 	const [Allowed, setAllowed] = useState(true);
 
 	//기존 폼요소 초기화 함수
@@ -73,9 +81,10 @@ function Community() {
 		);
 	};
 
+	//Posts값이 변경될때마다 로컬 스토리지에 기존 데이터를 다시 문자열로 변환해서 저장
 	useEffect(() => {
-		console.log(Allowed);
-	}, [Allowed]);
+		localStorage.setItem('post', JSON.stringify(Posts));
+	}, [Posts]);
 
 	return (
 		<Layout name={'Community'}>
