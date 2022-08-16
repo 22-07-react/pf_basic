@@ -62,7 +62,7 @@ function Main() {
 			<News />
 			<Pics />
 			<Vids />
-			<Btns setIndex={setIndex} Scrolled={Scrolled} pos={pos.current} Index={Index} />
+			<Btns Index={Index} setIndex={setIndex} Scrolled={Scrolled} pos={pos.current} />
 		</main>
 	);
 }
