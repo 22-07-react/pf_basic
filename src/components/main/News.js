@@ -25,10 +25,6 @@ function News() {
 		localStorage.setItem('post', JSON.stringify(Posts));
 	}, []);
 
-	useEffect(() => {
-		console.log(Posts);
-	}, [Posts]);
-
 	return (
 		<section id='news' className='myScroll'>
 			<h1>News</h1>
