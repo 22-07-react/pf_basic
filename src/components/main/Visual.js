@@ -9,7 +9,7 @@ const btnStyle = {
 
 function Visual() {
 	return (
-		<figure id='visual'>
+		<figure id='visual' className='myScroll'>
 			<button
 				style={btnStyle}
 				onClick={() => {
