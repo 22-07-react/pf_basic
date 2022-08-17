@@ -1,14 +1,16 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination } from 'swiper';
+import { Pagination, Navigation } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 
 function Vids() {
 	return (
 		<section id='vids' className='myScroll'>
 			<Swiper
+				modules={[Pagination, Navigation]}
 				pagination={{ clickable: true }}
-				modules={[Pagination]}
+				navigation={true}
 				spaceBetween={50}
 				loop={true}
 				slidesPerView={3}
