@@ -7,10 +7,16 @@ function Pics({ Scrolled, currentPos }) {
 		<section id='pics' className='myScroll'>
 			<h1
 				style={{
-					left: position,
+					left: position * 4,
 				}}>
-				Recent Flickr
+				FLICKR
 			</h1>
+			<h2
+				style={{
+					left: position / 2,
+				}}>
+				GALLERY
+			</h2>
 		</section>
 	);
 }
